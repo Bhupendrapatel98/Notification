@@ -1,6 +1,7 @@
 package com.example.notification.network;
 
 import com.example.notification.Model.Model;
+import com.example.notification.Model.ModelMultiple;
 import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
 import com.google.gson.JsonObject;
 
@@ -18,5 +19,9 @@ public interface PostRequest {
     @POST("send")
     @Headers({"Accept: application/json"})
     Call<JsonObject> send(@Body Model model,@Header("Authorization")String key);
+
+    @POST("send")
+    @Headers({"Accept: application/json"})
+    Call<JsonObject> song(@Body ModelMultiple modelMultiple,@Header("Authorization")String key);
 
 }

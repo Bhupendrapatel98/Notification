@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Build;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
@@ -22,7 +23,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         super.onMessageReceived(remoteMessage);
 
 
-//        remoteMessage.getNotification().getTitle()
+        Log.i("mndvmdcvdcv", "onMessageReceived: "+remoteMessage.getNotification().getTitle());
 
         sendNotification("dsh vds  sdc v udscvs ");
     }
